@@ -18,10 +18,11 @@ app.use("/notice",noticesRoute)
 
 app.get("/", async (req, res) => {
   let data = await userNotices.find({}).limit(10);
-  res.status(200).json({
-    status: "sucess",
-    data: data,
-  });
+  // res.status(200).json({
+  //   status: "sucess",
+  //   data: data,
+  // });
+  res.send("hello from server")
 });
 
 const PORT = process.env.PORT;
