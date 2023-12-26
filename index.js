@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
   res.send("hello from server")
 });
 
-const PORT = process.env.PORT;
+const PORT = 8000;
 app.listen(PORT, async () => {
   await connection;
   console.log("listining...");
